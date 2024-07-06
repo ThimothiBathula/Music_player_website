@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.songLyrics{
+    width:400px;
+    height: 510px;
+    background-color: aqua;
+    border-radius:10px ;
+    transition: all 10s;
+}
+.songLyrics .topOptions{
+    position: fixed;
+    width:400px;
+    height:60px;
+    border-bottom: 1px solid black;
+}
+.songLyrics select
+{
+   margin:10px;
+   border: none;
+   background:rgba(255, 255, 255, 0.5)
+   
+}
+.songLyrics select option{
+    background-color:cyan;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+/* .songLyrics select option:focus{
+    background-color: aqua;
+} */
+.songLyrics select::selection{    
+    background-color: transparent;
+}
+.songLyrics .lyricContent{
+    margin-top: 70px;
+    margin-left: 10px;
+    overflow-y: scroll;
+    width:380px;
+    height: 420px;
+    font-family: "Oswald", sans-serif;
+    font-weight:200px;
+    
+}
+.lyricContent::-webkit-scrollbar{
+    background-color: transparent;
+}
+.container .songdetails{
+    z-index: -1;
+}
+.container{
+    width:300px;
+    height:510px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    overflow: hidden;
+}
+.circles{
+    width:100%;
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+}
+.circles .icon{
+    width:50px;
+    height: 50px;
+    background-color: rgba(32, 32, 32, 0.4);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+}
+.container .head{
+    text-align: center;
+}
+.container .title{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+}
+.container .title marquee{
+    width:200px;
+    transition: all 5s linear;
+}
+.container .title .image{
+    width:200px;
+    height: 300px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px black;
+}
+.container .audio .controls{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    height: 150px;
+}
+.container .audio .icon1{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:rgb(252, 7, 7);
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px black ;
+}
+.container .audio .progress{
+    width:100%;
+    display: flex;
+   justify-content: center;
+   height: 50px;
+}
+.container .audio .progress audio{
+    display: none;
+}
+.container .audio .progress input{
+    width:200px;
+    -webkit-appearance: none;
+    height: 4px;
+    background-color: orange;
+    margin-top:10px ;
+    border-radius: 10px;
+}
+.container .audio .progress input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(255, 0, 0);
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    border:2px solid white;
+}
+.container .controls .hide{
+    display: none;
+}
+.container .controls .show{
+    display: block;
+}
+.container .controls .icon2{
+    width:60px;
+    height: 60px;
+    background-color: coral;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px black ;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 25px;
+}
+.pop{
+    width:100px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    top: 90px;
+    right: 32rem; 
+    z-index: 9;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+.pop:hover{
+    box-shadow: 1px 1px 10px white;
+}
+.pop .lyric{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    height: 100%;
+}
+.pop .lyric:hover{
+    background:black;
+    border-radius: 10px;
+    color:white
+}
+.circles .right .hideMenu{
+    display: none;
+}
+.circles .right .showMenu{
+    display: block;
+}
+.hideLyricsOPtion{
+    display: none;
+}
+.showLyricsOption{
+    display: block;
+}
+.hideSongLYrics{
+    display: none;
+}
+.lyricsSpace{
+    display: block;
+}
+.songLyrics .topOptions .closeOption{
+    width:50px;
+    height: 50px;
+    background-color: rgba(32, 32, 32, 0.4);
+    border-radius: 50px;
+    color:white;
+    float: right;
+    margin: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

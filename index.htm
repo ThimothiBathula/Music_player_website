@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="songLyrics hideSongLYrics" id="Lyrics">
+    <div class="topOptions">
+    <select name="" id="languages" calss="language" onchange="selectLanguage()">
+      <option value="default" selected>select which language you want</option>
+      <option value="TELUGU">TELUGU</option>
+      <option value="ENGLISH">ENGLISH</option>
+      <option value="HINDHI">HINDHI</option>
+      <option value="TAMIL">TAMIL</option>
+    </select>
+    <div class="closeOption" onclick="closeLyrics()">
+      <i class="fa-regular fa-x" id="close"></i>
+    </div>
+    </div>
+    <div class="lyricContent" id="content">
+
+    </div>
+  </div>
+    <div class="container">
+      <div class="pop hideLyricsOPtion" id="LyricsOption">
+        <button class="lyric " onclick="ShowLyricsBar()">Lyrics</button>
+      </div>
+      <div class="songdetails">
+      <div class="circles">
+        <div class="left icon">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+       
+        <div class="right icon" onclick="MenuHide()">
+            <i class="fa-solid fa-bars showMenu" id="open"></i>
+            <i class="fa-regular fa-x hideMenu" id="close"></i>
+        </div>
+      </div>
+      <h1 class="head">Music Player</h1>
+      <div class="title">
+        <img src="./images/song1.jpg" alt="Song Image" class="image" id="imageSrc">
+       <marquee behavior="" direction="">
+        <p class="musictitle">Anuvanuvu Alalegase Teleyani O Anandhame</p>
+        </marquee>
+       
+      </div>
+      <div class="audio">
+        <div class="progress">
+        <audio src="./songs/[iSongs.info] 04 - Anuvanuvuu.mp3" controls id="song"></audio>
+        <input type="range" name="" id="progres" min="0" onchange="change()">
+        </div>
+        <div class="controls">
+            
+            <div class="prev icon1" onclick="prev()"><i class="fa-solid fa-backward"></i></div>
+            <div class="pusePlay icon2" onclick="PlayPause()">
+                <i class="fa-solid fa-play show"  id="play"></i>
+                <i class="fa-solid fa-pause hide" id="pause"></i></div>
+            <div class="next icon1" onclick="next()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+      
+    </div>
+
+    </div>
+    <script  src="./index.js"></script>
+</body>
+</html>
